@@ -1,49 +1,90 @@
-# 📊 Hypothesis Testing – Assignment 2
+# 📊 Hypothesis Testing on Cholesterol Levels  
 
-## 📝 Overview
-This assignment explores **statistical hypothesis testing** to determine whether there is **enough statistical evidence to support or reject assumptions about data distributions**.
-
-📢 **Key Learning Outcomes:**
-- **Understanding Hypothesis Testing:** Null & Alternative Hypothesis.
-- **Statistical Significance & P-Values.**
-- **T-tests (One-Sample & Two-Sample) for Mean Comparisons.**
-- **Chi-Square Tests for Categorical Data.**
-- **ANOVA for Multi-Group Comparisons.**
-- **Confidence Intervals & Effect Size Analysis.**
+*Statistical hypothesis testing to analyze the effect of a diet program on cholesterol levels using R*  
 
 ---
 
-## 📌 Topics Covered
-### **1️⃣ Formulating Hypotheses**
-- **Focus:** Understanding null and alternative hypotheses.
-- **Skills:** Identifying testable claims, selecting correct statistical tests.
+## 📌 Overview  
 
-### **2️⃣ T-Tests for Mean Comparisons**
-- **Focus:** Comparing means between groups.
-- **Skills:** One-Sample T-Test, Two-Sample T-Test, Assumption Checking.
-
-### **3️⃣ Chi-Square Tests for Categorical Data**
-- **Focus:** Testing relationships between categorical variables.
-- **Skills:** Chi-Square Goodness-of-Fit, Chi-Square Test of Independence.
-
-### **4️⃣ ANOVA (Analysis of Variance)**
-- **Focus:** Comparing means across multiple groups.
-- **Skills:** One-Way ANOVA, Post-Hoc Analysis.
-
-### **5️⃣ Statistical Significance & Confidence Intervals**
-- **Focus:** Measuring the reliability of test results.
-- **Skills:** P-Values, Confidence Intervals, Type I & Type II Errors.
+This project performs **hypothesis testing** to determine whether an individual's **cholesterol level** has changed after following a **6-month diet program**. Using **R**, the dataset (`CholestrolLevel.xlsx`) is analyzed to assess normality, compute statistical measures, and conduct a **two-tailed z-test** to evaluate changes in cholesterol levels.  
 
 ---
 
-## 📂 Files Included
-📌 `stats1_assignment2.ipynb` → Jupyter Notebook with hypothesis testing methods.  
-📌 `Stats1-Assignment2-Report.pdf` → Detailed report summarizing key findings.  
-📌 `Stats1-Assignment2-Presentation.pptx` → PowerPoint explaining the analysis.
+## 🛠 Key Features & Analysis  
+
+✅ **Hypothesis Statements**  
+   - **Null Hypothesis (H0):** The mean cholesterol level remains **5.95** after the diet.  
+   - **Alternative Hypothesis (H1):** The mean cholesterol level **differs** from **5.95** after the diet.  
+
+✅ **Normality Assessment**  
+   - **QQ Plot**: Determines if data follows a normal distribution.  
+   - **Histogram with Normal Curve**: Visualizes the data distribution.  
+
+✅ **Step-by-Step Hypothesis Testing**  
+   - Define hypothesis statements.  
+   - Check normality assumptions.  
+   - Calculate **z-score** and **p-value** to determine significance.  
+
+✅ **Data Analysis in R**  
+   - **z-score calculation**:  
+     ```r
+     z = (mu - mu0) / (sigma / sqrt(n))
+     ```  
+   - **p-value calculation**:  
+     ```r
+     p <- 2*pnorm(abs(z), lower.tail=FALSE)
+     ```  
+
+✅ **Summary of Findings & Conclusion**  
+   - If **p-value < 0.05**, reject the null hypothesis (H0) and conclude a significant change in cholesterol levels.  
 
 ---
 
-## 🚀 **How to Run**
-1. **Clone the repository:**
-   ```sh
-   git clone https://github.com/jayp881998/Fundamentals-of-Statistical-Analysis.git
+## 📊 Data Analysis Summary  
+
+### 1️⃣ Normality Assessment: QQ Plot & Histogram  
+
+- The **QQ plot** shows that the data points are aligned with the reference line, indicating normality.  
+- The **histogram** exhibits a **bell-shaped curve**, further supporting normality.  
+
+📌 **Visualizations:**  
+✅ **Histogram with Normal Curve**  
+![Histogram](Histogram.png)  
+
+✅ **QQ Plot of Cholesterol Levels**  
+![QQ Plot](QQ Plot.png)  
+
+### 2️⃣ Hypothesis Testing: Two-Tailed Z-Test  
+
+- **Given Values:**  
+  - Population Mean (µ0) = **5.95**  
+  - Population Standard Deviation (σ) = **0.897**  
+  - Significance Level (α) = **0.05**  
+
+- **Results from R Analysis:**  
+  - **Computed z-score:** **-11.13**  
+  - **Computed p-value:** **8.82 × 10⁻²⁹**  
+
+- **Conclusion:**  
+  - Since **p-value < 0.05**, the null hypothesis (H0) is **rejected**.  
+  - This provides **strong evidence** that the mean cholesterol level **after the diet is significantly different from 5.95**.  
+
+---
+
+## 📜 Key Learnings & Insights  
+
+🔹 **Statistical Testing:** Practical application of hypothesis testing in healthcare research.  
+🔹 **Data Distribution:** QQ plots and histograms confirm normality before testing.  
+🔹 **Evidence-Based Decision Making:** Statistical significance leads to actionable conclusions.  
+
+This project is crucial for **healthcare studies, clinical trials, and diet effectiveness research**.  
+
+---
+
+## 🔧 Technologies Used  
+
+- **Programming Language:** R  
+- **Libraries:** ggplot2, stats, openintro  
+- **Statistical Methods:** z-test, p-value computation, normality testing  
+- **Visualization Techniques:** QQ Plot, Histogram  
+
