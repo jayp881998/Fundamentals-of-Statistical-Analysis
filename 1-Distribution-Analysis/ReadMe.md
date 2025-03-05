@@ -46,7 +46,7 @@ These insights help in **fuel economy research, emission regulations, and predic
 ✔ **Lighter cars with low mpg suggest inefficiencies in design.**  
 ✔ **Anomalies detected in compact car segment.**  
 
-📌 _(Add a sample scatterplot image here)_  
+📌 _![alt text](image.png)_  
 
 ### **Engine Displacement vs. Cylinder Count**  
 ✔ **4-cylinder cars:** ~70 to 150 cu.in.  
@@ -54,7 +54,7 @@ These insights help in **fuel economy research, emission regulations, and predic
 ✔ **8-cylinder cars:** ~270 to 475 cu.in.  
 ✔ **Outliers observed** in small-engine vehicles with **unexpectedly high displacement**.  
 
-📌 _(Add a sample boxplot image here)_  
+📌 _![alt text](image-1.png)_  
 
 ---
 
