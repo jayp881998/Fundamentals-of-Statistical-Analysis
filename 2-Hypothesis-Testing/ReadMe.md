@@ -52,7 +52,7 @@ This project performs **hypothesis testing** to determine whether an individual'
 ![Histogram](Histogram.png)  
 
 ✅ **QQ Plot of Cholesterol Levels**  
-![QQ Plot](QQ Plot.png)  
+![QQ Plot](image.png)
 
 ### 2️⃣ Hypothesis Testing: Two-Tailed Z-Test  
 
